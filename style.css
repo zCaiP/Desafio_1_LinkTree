@@ -1,0 +1,121 @@
+:root {
+  --army-green: #4b5320;
+  --camo-green: #353a1a;
+  --desert-sand: #d3bc8d;
+  --black-ops: #1a1c12;
+  --white: #f5f5f5;
+  --metal: #7a7a7a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black-ops);
+  color: var(--white);
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--camo-green);
+  padding: 40px;
+  border: 2px solid var(--army-green);
+  border-radius: 4px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.avatar {
+    width: 100%; 
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    border: 3px solid var(--desert-sand);
+    margin-bottom: 24px;
+    object-fit: cover;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.location {
+  color: var(--desert-sand);
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.bio {
+  font-size: 15px;
+  color: #b0b0b0;
+  margin-bottom: 30px;
+  border-top: 1px solid var(--army-green);
+  padding-top: 15px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button {
+  background-color: var(--army-green);
+  color: var(--white);
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid var(--camo-green);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--desert-sand);
+  color: var(--black-ops);
+  transform: scale(1.02);
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--desert-sand);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 150px;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .avatar {
+        max-width: 180px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .button {
+        padding: 12px;
+        font-size: 13px;
+    }
+}
